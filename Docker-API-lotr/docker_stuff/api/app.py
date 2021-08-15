@@ -1,38 +1,32 @@
 from flask import Flask, jsonify
 from flask import request
-from .helpers.helpers import configure_logging
-from .helpers.Database import Database
-from pymongo.errors import ConnectionFailure
+from .helpers.helpers import configure_logging, get_connection
 
 app = Flask(__name__)
 configure_logging(app)
 
-HOST = 'db-mongo'
-PORT = 27017
-DB_NAME = 'animal_db'
-DB_TYPE = 'mongo'
+DB_TEST_TABLE_NAME = 'animal_tb'
 
-
-def get_connection():
-    try:
-        dbi = Database(host=HOST, port=PORT, db=DB_NAME, db_type=DB_TYPE)
-        conn = dbi.connection()
-    except ConnectionFailure:
-        err_msg = "Server not available"
-        app.logger.info(err_msg)
-        return None
-    return conn
+db_animal_data = {
+    'host': 'db-mongo',
+    'port': 27017,
+    'db_name': 'animal_db',
+    'db_type': 'mongo'
+}
 
 
 @app.route('/animals')
 def get_stored_animals():
-    conn = get_connection()
+    conn = get_connection(app, db_animal_data)
     response = None
     if conn is not None:
-        _animals = conn['animal_tb'].find()
-        animals = [{"id": animal["id"], "name": animal["name"], "type": animal["type"]} for animal in _animals]
+        _animals = conn[DB_TEST_TABLE_NAME].find()
+        animals_list = []
+        for animal in _animals:
+            animal_data = {"id": animal["id"], "name": animal["name"], "type": animal["type"]}
+            animals_list.append(animal_data)
         app.logger.info(f'endpoint=/animals; ip={request.remote_addr}; status=200; method={request.method}')
-        response = jsonify({"animals": animals})
+        response = jsonify({"animals": animals_list})
     return response
 
 

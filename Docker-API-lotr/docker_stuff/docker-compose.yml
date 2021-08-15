@@ -1,0 +1,37 @@
+version: "3.9"
+services: 
+
+  db-mongo:
+    image: mongo:5.0.2
+    container_name: db-mongo
+    restart: always
+    working_dir: /var/www
+    #command: mongod --auth
+    # environment:
+    # MONGO_INITDB_ROOT_USERNAME: root
+    # MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./db:/var/www
+    ports:
+      - "27017:27017"
+
+
+  api:
+    image: python:3.8
+    container_name: flask-api
+    working_dir: /var/www/api
+    restart: unless-stopped
+    volumes:
+      - ./api:/var/www/api
+    build: ./api
+    environment:
+      APP_ENV: "prod"
+      APP_DEBUG: "False"
+      APP_PORT: 5000
+      MONGODB_DATABASE: people
+      MONGODB_USERNAME: root
+      MONGODB_PASSWORD: password
+      MONGODB_HOSTNAME: db-mongo
+    ports: 
+      - "5000:5000"
+

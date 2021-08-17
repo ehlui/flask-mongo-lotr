@@ -32,6 +32,32 @@ def page_not_found():
     return render_template('404.html'), 404
 
 
+@tolkien.route('/movies')
+def get_movies():
+    response = {'data': 'None'}
+    if db is not None:
+        table_elements = db['movies'].find()
+        movies_list = []
+        for element in table_elements:
+            movies_list.append(element)
+        response = jsonify({"movies": movies_list})
+    app.logger.info(f'endpoint=/tolkien/movies ; msg={response}')
+    return response
+
+
+@tolkien.route('/chapters')
+def get_chapters():
+    response = {'data': 'None'}
+    if db is not None:
+        table_elements = db['chapters'].find()
+        chapters_list = []
+        for element in table_elements:
+            chapters_list.append(element)
+        response = jsonify({"chapters": chapters_list})
+    app.logger.info(f'endpoint=/tolkien/chapters ; msg={response}')
+    return response
+
+
 @tolkien.route('/books')
 def get_books():
     response = {'data': 'None'}
@@ -39,8 +65,7 @@ def get_books():
         table_elements = db['books'].find()
         book_list = []
         for element in table_elements:
-            book = {'id': element['_id'], 'name': element['name']}
-            book_list.append(book)
+            book_list.append(element)
         response = jsonify({"books": book_list})
     app.logger.info(f'endpoint=/tolkien/books ; msg={response}')
     return response
@@ -54,14 +79,7 @@ def get_characters():
         table_elements = db['characters'].find()
         char_list = []
         for element in table_elements:
-            char = {
-                'id': element['_id'], 'death': element['death'],
-                'birth': element['birth'], 'hair': element['hair'],
-                'realm': element['realm'], 'height': element['height'],
-                'spouse': element['realm'], 'gender': element['height'],
-                'name': element['name'], 'race': element['race']
-            }
-            char_list.append(char)
+            char_list.append(element)
         response = jsonify({"characters": char_list})
     app.logger.info(f'endpoint=/tolkien/chars ; msg=characters_list')
     return response

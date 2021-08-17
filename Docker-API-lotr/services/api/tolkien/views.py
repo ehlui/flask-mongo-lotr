@@ -2,6 +2,7 @@ from flask import Blueprint, url_for, redirect, render_template, jsonify
 from ..helpers.LOTRinjeccion import main as inject_data
 from ..helpers.helpers import db_data
 from .database import Database
+from flask import current_app as app
 
 APP_NAME = 'tolkien'
 tolkien = Blueprint(APP_NAME, __name__, template_folder="templates/tolkien")
@@ -16,11 +17,13 @@ def home():
 
 @tolkien.route('/inject-data')
 def data_injection():
+    app.logger.info('endpoint=/inject-data ; msg=Injecting data to the database')
     return inject_data(db)
 
 
 @tolkien.app_errorhandler(404)
 def error_page(e):
+    app.logger.info(f'endpoint=/tolkien/? ; msg={e}')
     return redirect(url_for(f'{APP_NAME}.page_not_found'))
 
 
@@ -39,6 +42,7 @@ def get_books():
             book = {'id': element['_id'], 'name': element['name']}
             book_list.append(book)
         response = jsonify({"books": book_list})
+    app.logger.info(f'endpoint=/tolkien/books ; msg={response}')
     return response
 
 
@@ -59,4 +63,5 @@ def get_characters():
             }
             char_list.append(char)
         response = jsonify({"characters": char_list})
+    app.logger.info(f'endpoint=/tolkien/chars ; msg=characters_list')
     return response

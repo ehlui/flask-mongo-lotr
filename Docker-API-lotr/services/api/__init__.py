@@ -1,10 +1,12 @@
 import logging
 
+
 def verbose_formatter():
     return logging.Formatter(
         '[%(asctime)s.%(msecs)d] ; %(levelname)s ; [%(name)s.%(funcName)s:%(lineno)d] ; %(message)s',
         datefmt='%d-%m-%Y_%H:%M:%S'
     )
+
 
 def configure_logging(app):
     # Eliminamos los posibles manejadores, si existen, del logger por defecto

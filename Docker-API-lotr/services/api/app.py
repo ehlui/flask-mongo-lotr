@@ -15,8 +15,7 @@ def hello():
         f'status=200; method={request.method}'
     )
     return jsonify(
-        status=True,
-        message='Welcome to a Dockerized Flask MongoDB app!'
+        {"status": 'OK'}
     )
 
 

@@ -1,7 +1,9 @@
 version: "3.9"
 services:
   api-lotr:
-    build: ./api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
     container_name: flask-api-lotr
     working_dir: /var/www/api
     restart: unless-stopped
@@ -24,12 +26,12 @@ services:
   db-lotr:
     image: mongo:5.0.2
     container_name: db-mongo-lotr
-    restart: always
-    #command: mongod --auth
-    # environment:
-    # MONGO_INITDB_ROOT_USERNAME: root
-    # MONGO_INITDB_ROOT_PASSWORD: password
-    volumes:
-      - ./db:/data/db
     ports:
       - "27017:27017"
+      # restart: always
+      #command: mongod --auth
+      # environment:
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: password
+      #volumes:
+    # - ./db:/data/db

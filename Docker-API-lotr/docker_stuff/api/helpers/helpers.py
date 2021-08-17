@@ -1,6 +1,12 @@
-from pymongo.errors import ConnectionFailure
-from .database import Database
 import logging
+import os
+
+db_data = {
+    'host': os.getenv("MONGODB_SERVICE_NAME", "No exist"),
+    'port': int(os.getenv("MONGODB_PORT", "0000")),
+    'db_name': os.getenv("MONGODB_DATABASE", "No exist"),
+    'db_type': os.getenv("DATABASE_TYPE", "No exist")
+}
 
 
 def verbose_formatter():
@@ -30,17 +36,3 @@ def configure_logging(app, path='logs/app.log'):
             l.addHandler(handler)
         l.propagate = False
         l.setLevel(logging.DEBUG)
-
-
-def get_connection(app, db_data):
-    try:
-        dbi = Database(
-            host=db_data['host'], port=db_data['port'],
-            db=db_data['db_name'], db_type=db_data['db_type']
-        )
-        conn = dbi.connection()
-    except ConnectionFailure:
-        err_msg = "Server not available"
-        app.logger.info(err_msg)
-        return None
-    return conn

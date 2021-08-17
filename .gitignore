@@ -27,7 +27,8 @@ venv/
 # heavy files
 ################################################
 characters.json
-
+db
+!/db/Dockerfile
 
 ################################################
 # Other files

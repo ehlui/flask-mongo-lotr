@@ -1,37 +1,35 @@
 version: "3.9"
-services: 
-
-  db-mongo:
+services:
+  api-lotr:
+    build: ./api
+    container_name: flask-api-lotr
+    working_dir: /var/www/api
+    restart: unless-stopped
+    volumes:
+      - ./api:/var/www/api
+    environment:
+      APP_ENV: 'development'
+      FLASK_APP: 'app.py'
+      FLASK_DEBUG: 'True'
+      APP_PORT: 5000
+      DATABASE_TYPE: mongo
+      MONGODB_PORT: 27017
+      MONGODB_DATABASE: lotr
+      MONGODB_USERNAME: root
+      MONGODB_PASSWORD: password
+      MONGODB_HOSTNAME: db-lotr
+      MONGODB_SERVICE_NAME: db-lotr
+    ports:
+      - "5000:5000"
+  db-lotr:
     image: mongo:5.0.2
-    container_name: db-mongo
+    container_name: db-mongo-lotr
     restart: always
-    working_dir: /var/www
     #command: mongod --auth
     # environment:
     # MONGO_INITDB_ROOT_USERNAME: root
     # MONGO_INITDB_ROOT_PASSWORD: password
     volumes:
-      - ./db:/var/www
+      - ./db:/data/db
     ports:
       - "27017:27017"
-
-
-  api:
-    image: python:3.8
-    container_name: flask-api
-    working_dir: /var/www/api
-    restart: unless-stopped
-    volumes:
-      - ./api:/var/www/api
-    build: ./api
-    environment:
-      APP_ENV: "prod"
-      APP_DEBUG: "False"
-      APP_PORT: 5000
-      MONGODB_DATABASE: people
-      MONGODB_USERNAME: root
-      MONGODB_PASSWORD: password
-      MONGODB_HOSTNAME: db-mongo
-    ports: 
-      - "5000:5000"
-

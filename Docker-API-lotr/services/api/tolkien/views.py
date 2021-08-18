@@ -66,18 +66,19 @@ def get_chaptest():
         chapter = db['chapters']
         endpoint = f'{APP_NAME}/chap_test'
         element = 'chapter'
-
         limit_arg = request.args.get('limit', 10)
         offset_arg = request.args.get('offset', 0)
 
         pag_dict = build_pagination(
             limit_arg, offset_arg, endpoint, element, chapter
         )
+
         chapters = chapter \
             .find(pag_dict["pagination_search"]) \
             .sort(element, pymongo.ASCENDING) \
             .limit(pag_dict["limit"])
         output = []
+
         for c in chapters:
             output.append(c)
 

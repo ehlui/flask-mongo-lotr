@@ -80,6 +80,10 @@ def build_pagination(limit_arg, offset_arg, endpoint, element, db_table):
     limit = arg_dict['limit']
     offset = arg_dict['offset']
 
+    max_elements = db_table.find().count()
+    if offset > max_elements:
+        offset = max_elements - 1
+
     start_id = db_table.find().sort(element, pymongo.ASCENDING)
     last_id = start_id[offset][element]
 

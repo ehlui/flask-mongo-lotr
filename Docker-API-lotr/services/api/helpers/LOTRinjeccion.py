@@ -39,7 +39,7 @@ def main(db_conn):
     data_path = os.path.join(PARENT_PATH, 'data')
 
     books_path = os.path.join(data_path, 'books.json')
-    chapters_path = os.path.join(data_path, 'chapters.json')
+    chapters_path = os.path.join(data_path, 'chapters_v2.json')  # chapters.json
     movies_path = os.path.join(data_path, 'movies.json')
     characters_path = os.path.join(data_path, 'characters.json')
 

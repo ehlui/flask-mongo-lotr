@@ -1,8 +1,9 @@
-from flask import Blueprint, url_for, redirect, render_template, jsonify
+from flask import Blueprint, url_for, redirect, render_template, jsonify, request
 from ..helpers.LOTRinjeccion import main as inject_data
-from ..helpers.helpers import db_data
+from ..helpers.helpers import db_data, build_pagination
 from .database import Database
 from flask import current_app as app
+import pymongo
 
 APP_NAME = 'tolkien'
 tolkien = Blueprint(APP_NAME, __name__, template_folder="templates/tolkien")
@@ -55,6 +56,39 @@ def get_chapters():
             chapters_list.append(element)
         response = jsonify({"chapters": chapters_list})
     app.logger.info(f'endpoint=/tolkien/chapters ; msg={response}')
+    return response
+
+
+@tolkien.route('/chap_test')
+def get_chaptest():
+    response = {'data': 'None'}
+    if db is not None:
+        chapter = db['chapters']
+        endpoint = f'{APP_NAME}/chap_test'
+        element = 'chapter'
+
+        limit_arg = request.args.get('limit', 10)
+        offset_arg = request.args.get('offset', 0)
+
+        pag_dict = build_pagination(
+            limit_arg, offset_arg, endpoint, element, chapter
+        )
+        chapters = chapter \
+            .find(pag_dict["pagination_search"]) \
+            .sort(element, pymongo.ASCENDING) \
+            .limit(pag_dict["limit"])
+        output = []
+        for c in chapters:
+            output.append(c)
+
+        response = jsonify(
+            {
+                "result": output,
+                'prev_url': pag_dict["prev_url"],
+                'next_url': pag_dict["next_url"]
+            }
+        )
+    app.logger.info(f'endpoint=/tolkien/chap_test ; msg=test_pagination')
     return response
 
 

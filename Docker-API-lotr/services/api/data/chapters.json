@@ -1,373 +1,373 @@
 [
   {
     "_id": "6091b6d6d58360f988133b8b",
-    "chapterName": "A Long-expected Party",
+    "chapter_name": "A Long-expected Party",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b8c",
-    "chapterName": "The Shadow of the Past",
+    "chapter_name": "The Shadow of the Past",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b8d",
-    "chapterName": "Three is Company",
+    "chapter_name": "Three is Company",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b8e",
-    "chapterName": "A Short Cut to Mushrooms",
+    "chapter_name": "A Short Cut to Mushrooms",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b8f",
-    "chapterName": "A Conspiracy Unmasked",
+    "chapter_name": "A Conspiracy Unmasked",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b90",
-    "chapterName": "The Old Forest",
+    "chapter_name": "The Old Forest",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b91",
-    "chapterName": "In the House of Tom Bombadil",
+    "chapter_name": "In the House of Tom Bombadil",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b92",
-    "chapterName": "Fog on the Barrow-Downs",
+    "chapter_name": "Fog on the Barrow-Downs",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b93",
-    "chapterName": "At the Sign of The Prancing Pony",
+    "chapter_name": "At the Sign of The Prancing Pony",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b94",
-    "chapterName": "Strider",
+    "chapter_name": "Strider",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b95",
-    "chapterName": "A Knife in the Dark",
+    "chapter_name": "A Knife in the Dark",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b96",
-    "chapterName": "Flight to the Ford",
+    "chapter_name": "Flight to the Ford",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b97",
-    "chapterName": "Many Meetings",
+    "chapter_name": "Many Meetings",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b98",
-    "chapterName": "The Council of Elrond",
+    "chapter_name": "The Council of Elrond",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b99",
-    "chapterName": "The Ring Goes South",
+    "chapter_name": "The Ring Goes South",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9a",
-    "chapterName": "A Journey in the Dark",
+    "chapter_name": "A Journey in the Dark",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9b",
-    "chapterName": "The Bridge of Khazad-dûm",
+    "chapter_name": "The Bridge of Khazad-dûm",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9c",
-    "chapterName": "Lothlórien",
+    "chapter_name": "Lothlórien",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9d",
-    "chapterName": "The Mirror of Galadriel",
+    "chapter_name": "The Mirror of Galadriel",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9e",
-    "chapterName": "Farewell to Lórien",
+    "chapter_name": "Farewell to Lórien",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133b9f",
-    "chapterName": "The Great River",
+    "chapter_name": "The Great River",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133ba0",
-    "chapterName": "The Breaking of the Fellowship",
+    "chapter_name": "The Breaking of the Fellowship",
     "book_id": "5cf5805fb53e011a64671582",
     "book": "The Fellowship Of The Ring"
   },
   {
     "_id": "6091b6d6d58360f988133ba1",
-    "chapterName": "The Departure of Boromir",
+    "chapter_name": "The Departure of Boromir",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba2",
-    "chapterName": "The Riders of Rohan",
+    "chapter_name": "The Riders of Rohan",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba3",
-    "chapterName": "The Uruk-Hai",
+    "chapter_name": "The Uruk-Hai",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba4",
-    "chapterName": "Treebeard",
+    "chapter_name": "Treebeard",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba5",
-    "chapterName": "The White Rider",
+    "chapter_name": "The White Rider",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba6",
-    "chapterName": "The King of the Golden Hall",
+    "chapter_name": "The King of the Golden Hall",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba7",
-    "chapterName": "Helm's Deep",
+    "chapter_name": "Helm's Deep",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba8",
-    "chapterName": "The Road to Isengard",
+    "chapter_name": "The Road to Isengard",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133ba9",
-    "chapterName": "Flotsam and Jetsam",
+    "chapter_name": "Flotsam and Jetsam",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133baa",
-    "chapterName": "The Voice of Saruman",
+    "chapter_name": "The Voice of Saruman",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bab",
-    "chapterName": "The Palantir",
+    "chapter_name": "The Palantir",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bac",
-    "chapterName": "The Taming of Smeagol",
+    "chapter_name": "The Taming of Smeagol",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bad",
-    "chapterName": "The Passage of the Marshes",
+    "chapter_name": "The Passage of the Marshes",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bae",
-    "chapterName": "The Black Gate is Closed",
+    "chapter_name": "The Black Gate is Closed",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133baf",
-    "chapterName": "Of Herbs and Stewed Rabbit",
+    "chapter_name": "Of Herbs and Stewed Rabbit",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb0",
-    "chapterName": "The Window on the West",
+    "chapter_name": "The Window on the West",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb1",
-    "chapterName": "The Forbidden Pool",
+    "chapter_name": "The Forbidden Pool",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb2",
-    "chapterName": "Journey to the Cross-roads",
+    "chapter_name": "Journey to the Cross-roads",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb3",
-    "chapterName": "The Stairs of Cirith Ungol",
+    "chapter_name": "The Stairs of Cirith Ungol",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb4",
-    "chapterName": "Shelob's Lair",
+    "chapter_name": "Shelob's Lair",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb5",
-    "chapterName": "The Choices of Master Samwise",
+    "chapter_name": "The Choices of Master Samwise",
     "book_id": "5cf58077b53e011a64671583",
     "book": "The Two Towers"
   },
   {
     "_id": "6091b6d6d58360f988133bb6",
-    "chapterName": "Minas Tirith",
+    "chapter_name": "Minas Tirith",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bb7",
-    "chapterName": "The Passing of the Grey Company",
+    "chapter_name": "The Passing of the Grey Company",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bb8",
-    "chapterName": "The Muster of Rohan",
+    "chapter_name": "The Muster of Rohan",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bb9",
-    "chapterName": "The Siege of Gondor",
+    "chapter_name": "The Siege of Gondor",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bba",
-    "chapterName": "The Ride of the Rohirrim",
+    "chapter_name": "The Ride of the Rohirrim",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bbb",
-    "chapterName": "The Battle of the Pelennor Fields",
+    "chapter_name": "The Battle of the Pelennor Fields",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bbc",
-    "chapterName": "The Pyre of Denethor",
+    "chapter_name": "The Pyre of Denethor",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bbd",
-    "chapterName": "The Houses of Healing",
+    "chapter_name": "The Houses of Healing",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bbe",
-    "chapterName": "The Last Debate",
+    "chapter_name": "The Last Debate",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bbf",
-    "chapterName": "The Black Gate Opens",
+    "chapter_name": "The Black Gate Opens",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc0",
-    "chapterName": "The Tower of Cirith Ungol",
+    "chapter_name": "The Tower of Cirith Ungol",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc1",
-    "chapterName": "The Land of Shadow",
+    "chapter_name": "The Land of Shadow",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc2",
-    "chapterName": "Mount Doom",
+    "chapter_name": "Mount Doom",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc3",
-    "chapterName": "The Field of Cormallen",
+    "chapter_name": "The Field of Cormallen",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc4",
-    "chapterName": "The Steward and the King",
+    "chapter_name": "The Steward and the King",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc5",
-    "chapterName": "Many Partings",
+    "chapter_name": "Many Partings",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc6",
-    "chapterName": "Homeward Bound",
+    "chapter_name": "Homeward Bound",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc7",
-    "chapterName": "The Scouring of the Shire",
+    "chapter_name": "The Scouring of the Shire",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   },
   {
     "_id": "6091b6d6d58360f988133bc8",
-    "chapterName": "The Grey Havens",
+    "chapter_name": "The Grey Havens",
     "book_id": "5cf58080b53e011a64671584",
     "book": "The Return Of The King"
   }

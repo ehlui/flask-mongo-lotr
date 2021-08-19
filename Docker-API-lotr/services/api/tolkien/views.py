@@ -1,8 +1,5 @@
-from flask import Blueprint, url_for, redirect, render_template, jsonify, request
-from ..helpers.LOTRinjeccion import main as inject_data
-from ..helpers.helpers import db_data, build_pagination
-from .database import Database
-from flask import current_app as app
+from flask import Blueprint, url_for, redirect, render_template, jsonify, request, current_app as app
+from . import inject_data, db_data, build_pagination, Database
 import pymongo
 
 APP_NAME = 'tolkien'

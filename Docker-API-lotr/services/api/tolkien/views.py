@@ -1,10 +1,15 @@
-from flask import Blueprint, url_for, redirect, render_template, jsonify, request, current_app as app
+from flask import Blueprint, url_for, redirect, \
+    render_template, jsonify, request, current_app as app
 from . import inject_data, db_data, build_pagination, Database
 import pymongo
 
 APP_NAME = 'tolkien'
-tolkien = Blueprint(APP_NAME, __name__, template_folder="templates/tolkien")
+tolkien = Blueprint(APP_NAME, __name__,
+                    template_folder="templates/tolkien",
+                    static_folder='static'
+                    )
 db = Database(db_data).get_database()
+
 
 
 @tolkien.route("/home")
@@ -15,7 +20,8 @@ def home():
 
 @tolkien.route('/inject-data')
 def data_injection():
-    app.logger.info('endpoint=/inject-data ; msg=Injecting data to the database')
+    app.logger.info('endpoint=/inject-data ; '
+                    'msg=Injecting data to the database')
     return inject_data(db)
 
 

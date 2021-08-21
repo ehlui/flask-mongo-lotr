@@ -19,6 +19,7 @@ async function fetch_api(endpoint, data_name, tag_id) {
 }
 
 async function fetch_api_paginations(endpoint, data_name, tag_id) {
+    console.log(endpoint)
     var data_container = document.getElementById(tag_id)
     var timeout = 3000;
     var data_and_timeout = []

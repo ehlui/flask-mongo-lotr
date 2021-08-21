@@ -87,6 +87,7 @@ def get_chaptest():
 
         for c in chapters:
             c.pop("_id",None)
+            c.pop("book_id",None)
             output.append(c)
 
         response = jsonify(

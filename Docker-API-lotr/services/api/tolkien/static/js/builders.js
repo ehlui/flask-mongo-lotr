@@ -84,12 +84,15 @@ function build_pagination_table(result, data_name, tag_id) {
     data_container.innerHTML = table
     data_container.prepend(title);
 
-    if (next_url) {
-        var btn_next = build_btn_pag("Next", "btn-next", next_url)
-        data_container.append(btn_next);
-    }
     if (prev_url) {
         var btn_prev = build_btn_pag("Previous", "btn-prev", prev_url)
         data_container.append(btn_prev);
     }
+    if (next_url) {
+        var btn_next = build_btn_pag("Next", "btn-next", next_url)
+        data_container.append(btn_next);
+    }
+
+
+    add_btn_events()
 }

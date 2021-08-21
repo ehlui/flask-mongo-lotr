@@ -43,6 +43,7 @@ def get_movies():
         table_elements = db['movies'].find()
         movies_list = []
         for element in table_elements:
+            element.pop("_id",None)
             movies_list.append(element)
         response = jsonify({"movies": movies_list})
     app.logger.info(f'endpoint=/tolkien/movies ; msg={response}')
@@ -56,6 +57,8 @@ def get_chapters():
         table_elements = db['chapters'].find()
         chapters_list = []
         for element in table_elements:
+            element.pop("_id",None)
+            element.pop("book_id",None)
             chapters_list.append(element)
         response = jsonify({"chapters": chapters_list})
     app.logger.info(f'endpoint=/tolkien/chapters ; msg={response}')
@@ -83,6 +86,7 @@ def get_chaptest():
         output = []
 
         for c in chapters:
+            c.pop("_id",None)
             output.append(c)
 
         response = jsonify(
@@ -103,6 +107,7 @@ def get_books():
         table_elements = db['books'].find()
         book_list = []
         for element in table_elements:
+            element.pop("_id",None)
             book_list.append(element)
         response = jsonify({"books": book_list})
     app.logger.info(f'endpoint=/tolkien/books ; msg={response}')

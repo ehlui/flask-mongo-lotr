@@ -5,8 +5,70 @@
 
 h1 {
     color: rebeccapurple;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
 }
 
 #main {
     text-align: center;
+}
+
+
+/*
+TABLES
+*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.table-container {
+    margin: 10px;
+}
+
+table {
+    border: 1px dotted black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px 0;
+}
+
+td {
+    padding: 10px 0;
+    background-color: antiquewhite;
+    /* Remove this line to disable grey background color */
+}
+
+th {
+    text-transform: capitalize;
+    height: 20px;
+    background-color: antiquewhite;
+    border-bottom: 5px solid black;
+}
+
+td,
+tr {
+    text-align: center;
+    background-color: #fcf6f6e2;
+}
+
+tr:hover {
+    background-color: #ff0000;
+    font-weight: bold;
 }

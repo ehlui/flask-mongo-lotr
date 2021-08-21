@@ -1,11 +1,11 @@
-from flask import Flask, jsonify
-from flask import request
-from .helpers.helpers import configure_logging
-from .tolkien.views import tolkien as tolkien_app
+from flask import Flask, request, redirect
+from . import tolkien_app, configure_logging
 
 app = Flask(__name__)
 configure_logging(app)
-app.register_blueprint(tolkien_app, url_prefix='/tolkien')
+BASE_ENDPOINT = '/tolkien'
+
+app.register_blueprint(tolkien_app, url_prefix=BASE_ENDPOINT)
 
 
 @app.route('/')
@@ -14,9 +14,7 @@ def hello():
         f'ip={request.remote_addr}; '
         f'status=200; method={request.method}'
     )
-    return jsonify(
-        {"status": 'OK'}
-    )
+    return redirect(location=BASE_ENDPOINT)
 
 
 if __name__ == '__main__':

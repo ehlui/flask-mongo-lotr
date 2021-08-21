@@ -1,13 +1,15 @@
-from flask import Blueprint, url_for, redirect, render_template, jsonify, request
-from ..helpers.LOTRinjeccion import main as inject_data
-from ..helpers.helpers import db_data, build_pagination
-from .database import Database
-from flask import current_app as app
+from flask import Blueprint, url_for, redirect, \
+    render_template, jsonify, request, current_app as app
+from . import inject_data, db_data, build_pagination, Database
 import pymongo
 
 APP_NAME = 'tolkien'
-tolkien = Blueprint(APP_NAME, __name__, template_folder="templates/tolkien")
+tolkien = Blueprint(APP_NAME, __name__,
+                    template_folder="templates/tolkien",
+                    static_folder='static'
+                    )
 db = Database(db_data).get_database()
+
 
 
 @tolkien.route("/home")
@@ -18,7 +20,8 @@ def home():
 
 @tolkien.route('/inject-data')
 def data_injection():
-    app.logger.info('endpoint=/inject-data ; msg=Injecting data to the database')
+    app.logger.info('endpoint=/inject-data ; '
+                    'msg=Injecting data to the database')
     return inject_data(db)
 
 
@@ -40,6 +43,7 @@ def get_movies():
         table_elements = db['movies'].find()
         movies_list = []
         for element in table_elements:
+            element.pop("_id",None)
             movies_list.append(element)
         response = jsonify({"movies": movies_list})
     app.logger.info(f'endpoint=/tolkien/movies ; msg={response}')
@@ -53,6 +57,8 @@ def get_chapters():
         table_elements = db['chapters'].find()
         chapters_list = []
         for element in table_elements:
+            element.pop("_id",None)
+            element.pop("book_id",None)
             chapters_list.append(element)
         response = jsonify({"chapters": chapters_list})
     app.logger.info(f'endpoint=/tolkien/chapters ; msg={response}')
@@ -80,6 +86,8 @@ def get_chaptest():
         output = []
 
         for c in chapters:
+            c.pop("_id",None)
+            c.pop("book_id",None)
             output.append(c)
 
         response = jsonify(
@@ -100,6 +108,7 @@ def get_books():
         table_elements = db['books'].find()
         book_list = []
         for element in table_elements:
+            element.pop("_id",None)
             book_list.append(element)
         response = jsonify({"books": book_list})
     app.logger.info(f'endpoint=/tolkien/books ; msg={response}')

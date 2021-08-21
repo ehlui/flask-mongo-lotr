@@ -36,6 +36,9 @@ def drop_data(table_name, conn):
 
 
 def main(db_conn):
+    if db_conn is None:
+        raise Exception('database instance is none')
+
     data_path = os.path.join(PARENT_PATH, 'data')
 
     books_path = os.path.join(data_path, 'books.json')
@@ -68,4 +71,4 @@ def main(db_conn):
 
 
 if __name__ == '__main__':
-    main()
+    main(db_conn=None)

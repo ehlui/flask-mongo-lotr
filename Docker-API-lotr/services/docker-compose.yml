@@ -28,7 +28,7 @@ services:
     container_name: db-mongo-lotr
     ports:
       - "27017:27017"
-      # restart: always
+    restart: always
       #command: mongod --auth
       # environment:
       # MONGO_INITDB_ROOT_USERNAME: root

@@ -41,3 +41,7 @@ class Database:
             err_msg = "Server not available"
             app.logger.info(err_msg)
         return connection
+
+    @staticmethod
+    def raise_database_none():
+        raise ConnectionFailure("Cannot establish db connection")

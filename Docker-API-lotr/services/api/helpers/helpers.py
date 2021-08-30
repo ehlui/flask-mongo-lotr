@@ -10,6 +10,12 @@ db_data = {
     'db_type': os.getenv("DATABASE_TYPE", "No exist")
 }
 
+db_data_test = {
+    'host': os.getenv("MONGODB_SERVICE_NAME", "No exist"),
+    'port': int(os.getenv("MONGODB_PORT", "0000")),
+    'db_name': 'tolkien_test',
+    'db_type': os.getenv("DATABASE_TYPE", "No exist")
+}
 
 def verbose_formatter():
     return logging.Formatter(

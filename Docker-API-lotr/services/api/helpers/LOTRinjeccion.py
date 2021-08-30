@@ -3,15 +3,12 @@ Script for inject all data from api/data to the mongo service
 """
 import json
 import os
-from flask import Flask
 from .helpers import configure_logging
 from os.path import dirname, abspath
+from . import get, post, delete
 
 PARENT_PATH = str(dirname(dirname(abspath(__file__))))
 LOG_PATH = os.path.join(PARENT_PATH, 'logs', 'app.log')
-
-app = Flask(__name__)
-configure_logging(app, path=LOG_PATH)
 
 
 def insert_data(file_path, table_name, conn):
@@ -35,14 +32,16 @@ def drop_data(table_name, conn):
         conn[table_name].drop()
 
 
-def main(db_conn):
+def main(app, db_conn):
     if db_conn is None:
         raise Exception('database instance is none')
+
+    configure_logging(app, path=LOG_PATH)
 
     data_path = os.path.join(PARENT_PATH, 'data')
 
     books_path = os.path.join(data_path, 'books.json')
-    chapters_path = os.path.join(data_path, 'chapters_v2.json')  # chapters.json
+    chapters_path = os.path.join(data_path, 'chapters.json')  # chapters.json
     movies_path = os.path.join(data_path, 'movies.json')
     characters_path = os.path.join(data_path, 'characters.json')
 
@@ -58,13 +57,13 @@ def main(db_conn):
     response = 'Data injected'
     try:
         for table_name in dict_lotr_tables_paths.keys():
-            drop_data(table_name, db_conn)
+            delete(table_name, db_conn)
 
         for table_name, file_path in dict_lotr_tables_paths.items():
-            insert_data(file_path, table_name, db_conn)
+            post(file_path, table_name, db_conn)
 
         for table_name in dict_lotr_tables_paths.keys():
-            get_data(table_name, db_conn)
+            get(table_name, db_conn)
     except Exception as e:
         response = f'err--{e}'
     return response

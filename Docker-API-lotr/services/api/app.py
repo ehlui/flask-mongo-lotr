@@ -1,11 +1,12 @@
-from flask import Flask, request, redirect
-from . import tolkien_app, configure_logging
+from flask import request, redirect
+from . import create_app, BASE_ENDPOINT
 
-app = Flask(__name__)
-configure_logging(app)
-BASE_ENDPOINT = '/tolkien'
+# app = Flask(__name__)
+# configure_logging(app)
+# BASE_ENDPOINT = '/tolkien'
 
-app.register_blueprint(tolkien_app, url_prefix=BASE_ENDPOINT)
+# app.register_blueprint(tolkien_app, url_prefix=BASE_ENDPOINT)
+app = create_app()
 
 
 @app.route('/')
